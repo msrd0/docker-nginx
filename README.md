@@ -1,8 +1,8 @@
-[![](https://images.microbadger.com/badges/image/flashspys/nginx-static.svg)](https://microbadger.com/images/flashspys/nginx-static "Get your own image badge on microbadger.com") ![](https://img.shields.io/docker/pulls/flashspys/nginx-static.svg)
+[![](https://images.microbadger.com/badges/image/msrd0/nginx.svg)](https://microbadger.com/images/msrd0/nginx "Get your own image badge on microbadger.com") ![](https://img.shields.io/docker/pulls/msrd0/nginx.svg)
 
 # Super Lightweight nginx Image
 
-`docker run -v /srv/web:/static -p 8080:80 flashspys/nginx-static`
+`docker run -v /srv/web:/static -p 8080:80 msrd0/nginx`
 
 This command exposes an nginx server on port 8080 which serves the folder `/srv/web` from the host.
 
@@ -33,7 +33,7 @@ To use nginx-static with træfik add an entry to your services in a docker-compo
 
 ```
   example.org:
-    image: flashspys/nginx-static
+    image: msrd0/nginx
     container_name: example.org
     networks:
       - web
