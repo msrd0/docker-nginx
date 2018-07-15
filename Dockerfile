@@ -1,8 +1,6 @@
 FROM alpine:3.7
 
-LABEL maintainer="Felix Wehnert <felix@wehnert.me>"
-
-ENV NGINX_VERSION 1.15.0
+ENV NGINX_VERSION 1.15.1
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& CONFIG="\
@@ -21,6 +19,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 		--http-scgi-temp-path=/var/cache/nginx/scgi_temp \
 		--user=nginx \
 		--group=nginx \
+		--with-ipv6 \
 		--with-http_gunzip_module \
 		--with-http_gzip_static_module \
 		--with-threads \
